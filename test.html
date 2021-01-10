@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>create a music webpage</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<div class="main_div">
+    <div class="music_container">
+        <h2 id="title">LOTUS LANE</h2>
+        <h3 id="artist">The loylist</h3>
+        <div class="img_container">
+            <img src="img1.webp" alt="" />
+            </div>
+            <audio src="music/teri.mp3"></audio>
+            <!--controls-->
+            <div class="music_control">
+            <i class="fas fa-backward" id="prev" title="previous"></i>
+            <i class="fas fa-play main_button" id="play" title="play"></i>
+            <i class="fas fa-forward" id="next" title="next"></i>
+            </div>
+            </div>
+      </div>
+      <script>
+          const music = document.querySelector("audio");
+          const play = document.getElementById("play");
+
+          play.addEventListener('click',() => {
+              music.play();
+              play.classList.replace("fa-play","fa-pause");
+              
+          });
+      </script>
+    </body>
+</html>
